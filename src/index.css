@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles if needed */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.toggle-btn {
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: #1a202c; 
+}
+
+ .stat, .payout, .export-buttons {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.button-22 {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue", sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out, background .13s ease-in-out;
+}
+
+.button-22:active {
+  background-color: #006AE8;
+}
+
+.button-22:hover {
+  background-color: #1C84FF;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) { /* Tablet */
+  .flex {
+    flex-direction: column;
+  }
+
+  .button-22 {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 640px) { /* Mobile */
+  .container {
+    padding: 0 20px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .stat {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .stat-title {
+    font-size: 1rem; 
+  }
+
+  .stat-value {
+    font-size: 1.5rem; 
+  }
+
+  .button-22 {
+    padding: 12px 15px;
+  }
+}
+
+.toggle-dark-state-example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;  
+  height: 40px; 
+  font-size: 12px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark .toggle-dark-state-example {
+  background-color: #333;
+  color: #fff;
+  border-color: #666;
+}
+
+.toggle-dark-state-example:hover, .toggle-dark-state-example:focus {
+  background-color: #555;
+  color: #fff;
+}
+
+.toggle-dark-state-example:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+.toggle-dark-state-example svg {
+  width: 18px; 
+  height: 18px; 
+}
+
+
+
+
